@@ -10,14 +10,29 @@
   <link rel="canonical" href="https://cashinstinct.github.io/rakuten-canada/">
   <link rel="alternate" hreflang="fr-CA" href="https://cashinstinct.github.io/rakuten-canada/">
   <link rel="alternate" hreflang="x-default" href="https://cashinstinct.github.io/rakuten-canada/">
+  
   <meta property="og:type" content="website">
   <meta property="og:title" content="Lien parrainage Rakuten Canada — 30 $ de cashback automatique">
   <meta property="og:description" content="Cliquez sur le lien de parrainage Rakuten Canada, inscrivez-vous gratuitement et magasinez 30 $+. Le bonus de 30 $ s'active automatiquement — aucun code à entrer.">
   <meta property="og:url" content="https://cashinstinct.github.io/rakuten-canada/">
+  <meta property="og:image" content="https://cashinstinct.github.io/rakuten-canada/og.svg">
   <meta property="og:locale" content="fr_CA">
-  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lien parrainage Rakuten Canada — 30 $ de cashback">
   <meta name="twitter:description" content="Cliquez sur le lien, inscrivez-vous, magasinez 30 $+. Le bonus s'active automatiquement. Aucun code à saisir.">
+
+  <script>
+    try {
+      let theme = localStorage.getItem('theme');
+      if (!theme) {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
 
   <script type="application/ld+json">
   {
@@ -185,7 +200,7 @@
     details.faq-item[open]{box-shadow:var(--shadow-md)}
     summary.faq-q{padding:var(--space-5) var(--space-6);font-size:var(--text-base);font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);list-style:none;user-select:none}
     summary.faq-q::-webkit-details-marker{display:none}
-    summary.faq-q::after{content:'';display:block;width:18px;height:18px;flex-shrink:0;background:var(--color-primary);-webkit-mask:url("image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/contain no-repeat;transition:transform var(--t)}
+    summary.faq-q::after{content:'';display:block;width:18px;height:18px;flex-shrink:0;background:var(--color-primary);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/contain no-repeat;transition:transform var(--t)}
     details.faq-item[open] summary.faq-q::after{transform:rotate(180deg)}
     .faq-a{padding:0 var(--space-6) var(--space-5);font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.75;border-top:1px solid var(--color-divider)}
     .faq-a p{margin-top:var(--space-3);max-width:68ch}
@@ -200,10 +215,10 @@
     .cta-sec{padding:clamp(var(--space-12),8vw,var(--space-20)) var(--space-6);background:var(--color-surface);border-top:1px solid var(--color-divider)}
     .cta-box{max-width:640px;margin-inline:auto;text-align:center}
     .cta-box h2{font-size:var(--text-xl);margin-bottom:var(--space-4)}
-    .cta-box p{color:var(--color-text-muted);margin-bottom:var(--space-8)}
+    .cta-box p{color:var(--color-text-muted);margin-bottom:var(--space-8);margin-inline:auto;}
 
     footer{padding:var(--space-8) var(--space-6);border-top:1px solid var(--color-divider);text-align:center;font-size:var(--text-xs);color:var(--color-text-faint);max-width:100%;display:flex;flex-direction:column;align-items:center}
-    footer p{max-width:60ch;text-align:center;}
+    footer p{max-width:60ch;text-align:center;margin-inline:auto;}
     footer a{color:var(--color-text-muted);text-decoration:underline}
     footer a:hover{color:var(--color-primary)}
     .internal-links{margin-top:var(--space-4);display:flex;justify-content:center;gap:var(--space-4);flex-wrap:wrap}
@@ -223,7 +238,7 @@
       </svg>
       <span>Cashinstinct</span>
     </a>
-    <button class="theme-toggle" data-theme-toggle aria-label="Basculer le thème">
+    <button class="theme-toggle" data-theme-toggle aria-label="Basculer le thème" aria-pressed="false">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
   </div>
@@ -402,15 +417,44 @@
 </footer>
 
 <script>
-(function(){
-  const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
-  let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
-  r.setAttribute('data-theme',d);
-  const sun='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-  const moon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-  if(t){t.innerHTML=d==='dark'?sun:moon;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?sun:moon;});}
-})();
+  (() => {
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    const root = document.documentElement;
+
+    const sunIcon = `
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"></circle>
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+      </svg>
+    `;
+
+    const moonIcon = `
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    `;
+
+    if (themeToggle) {
+        const currentTheme = root.getAttribute('data-theme');
+        themeToggle.innerHTML = currentTheme === 'dark' ? sunIcon : moonIcon;
+        themeToggle.setAttribute('aria-pressed', currentTheme === 'dark' ? 'true' : 'false');
+        
+        themeToggle.addEventListener('click', () => {
+          const isDark = root.getAttribute('data-theme') === 'dark';
+          const nextTheme = isDark ? 'light' : 'dark';
+          
+          root.setAttribute('data-theme', nextTheme);
+          themeToggle.innerHTML = nextTheme === 'dark' ? sunIcon : moonIcon;
+          themeToggle.setAttribute('aria-pressed', nextTheme === 'dark' ? 'true' : 'false');
+          
+          try {
+            localStorage.setItem('theme', nextTheme);
+          } catch(e) {}
+        });
+    }
+  })();
 </script>
+
 </body>
 </html>
 
