@@ -77,16 +77,16 @@
 
   <style>
     :root {
-      --bg: #f5f0ff;
+      --bg: #f5f0ff;           
       --surface: #ffffff;
       --surface-soft: #ede4f9;
       --surface-muted: #e3d5f3;
       --text: #0a0520;
       --text-soft: #3a2855;
-      --muted: #7d689b;
+      --muted: #574475;        /* Rehaussé pour contraste de la nav rapide (anciennement #7d689b) */
       --border: #dfd0f2;
       --border-soft: #d3beeb;
-      --accent: #6c00c8;
+      --accent: #6c00c8;       
       --accent-dark: #5500a0;
       --warning-bg: #fff9eb;
       --warning-text: #805300;
@@ -101,10 +101,10 @@
       --surface-muted: #251642;
       --text: #f0eaff;
       --text-soft: #cbd5e1;
-      --muted: #64748b;
+      --muted: #94a3b8;        /* Rehaussé pour le mode sombre */
       --border: #2e1a50;
       --border-soft: #3d2468;
-      --accent: #a64dff;
+      --accent: #a64dff;       
       --accent-dark: #bf80ff;
       --warning-bg: #1c1917;
       --warning-text: #fdba74;
@@ -303,13 +303,13 @@
 
     .transparency {
       background: var(--surface-muted); border-radius: 8px; padding: 16px 20px;
-      font-size: 0.9rem; color: var(--text-soft); margin-top: 16px; border: 1px solid var(--border);
+      font-size: 0.92rem; color: var(--text); margin-top: 16px; border: 1px solid var(--border); /* Contraste forcé pour le texte */
     }
 
-    footer { border-top: 1px solid var(--border); padding: 28px 20px; text-align: center; font-size: 0.85rem; color: var(--muted); background: var(--bg); }
+    footer { border-top: 1px solid var(--border); padding: 28px 20px; text-align: center; font-size: 0.88rem; color: var(--text-soft); background: var(--bg); } /* Contraste footer amélioré */
     footer p { margin-bottom: 8px; }
     .footer-links { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 12px; }
-    .footer-links a { color: var(--muted); text-decoration: underline; }
+    .footer-links a { color: var(--accent); font-weight: 600; text-decoration: underline; }
 
     @media (max-width: 640px) {
       .facts { grid-template-columns: 1fr; }
@@ -350,11 +350,10 @@
 
       <p style="font-size: 0.95rem; margin-bottom: 32px; text-align: center; color: var(--muted);">
         Navigation rapide :
-        <a href="#comment-ca-marche" style="text-decoration: underline;">Guide d'activation</a> |
-        <a href="#details-offre" style="text-decoration: underline;">Conditions</a> |
-        <a href="#pourquoi-le-canada" style="text-decoration: underline;">Spécificité Canada</a> |
-        <a href="#review" style="text-decoration: underline;">Analyse d'expert</a> |
-        <a href="#faq" style="text-decoration: underline;">Foire aux questions</a>
+        <a href="#comment-ca-marche" style="text-decoration: underline; color: var(--accent); font-weight: 600;">Guide d'activation</a> |
+        <a href="#details-offre" style="text-decoration: underline; color: var(--accent); font-weight: 600;">Conditions</a> |
+        <a href="#review" style="text-decoration: underline; color: var(--accent); font-weight: 600;">Analyse d'expert</a> |
+        <a href="#faq" style="text-decoration: underline; color: var(--accent); font-weight: 600;">Foire aux questions</a>
       </p>
 
       <section id="comment-ca-marche">
@@ -401,7 +400,7 @@
           <li>
             <div>
               <h3>Recevoir l'argent réel</h3>
-              <p>Une fois l'achat confirmé par le marchand, le bonus de 30 $ s'ajoute à vos gains de remise en argent standard pour le prochain cycle de paiement trimestriel.</p>
+              <p>Une fois l'achat confirmé par le marchand, le bonus de 30 $ s'ajoute à vos gains de cashback standard pour le prochain cycle de paiement trimestriel.</p>
             </div>
           </li>
         </ol>
@@ -430,26 +429,17 @@
         </div>
       </section>
 
-      <section id="pourquoi-le-canada">
-        <span class="section-label">Pourquoi les extensions EN échouent</span>
-        <h2>L'importance d'utiliser le portail Rakuten Canada (.CA)</h2>
-        <div class="review-box" style="border-left: 4px solid var(--accent);">
-          <p><strong>Pour un utilisateur québécois ou canadien, utiliser par erreur une extension ou un lien affilié américain (.COM) invalide le cashback chez la majorité des marchands locaux.</strong></p>
-          <p>Le système de suivi de Rakuten est strictement cloisonné par région géopolitique. Si vous créez votre compte via un portail américain, vos achats effectués en dollars canadiens (CAD) sur des versions canadiennes de sites comme <strong>Dell</strong> ou <strong>HP</strong> ne déclencheront aucun retour d'argent. Ce lien d'invitation est nativement configuré pour la plateforme canadienne afin d'assurer l'admissibilité des transactions.</p>
-        </div>
-      </section>
-
       <section id="review">
         <span class="section-label">Analyse</span>
         <h2>Pourquoi intégrer Rakuten Canada ? (Avis d'expert)</h2>
         <div class="review-box">
-          <p><strong>Je possède mon compte Rakuten Canada depuis le 23 novembre 2013.</strong> Au fil des années, j'ai pu valider la fiabilité du système de versement. Le portail ne modifie en rien le prix final appliqué par le marchand, il négocie simplement une commission d'apporteur d'affaires qu'il partage équitablement avec vous sous forme de remise en argent.</p>
+          <p>Rakuten Canada constitue l'outil de base pour optimiser les achats sur le web. Le portail ne modifie en rien le prix final appliqué par le marchand, il négocie simplement une commission d'apporteur d'affaires qu'il partage équitablement avec vous sous forme de remise en argent.</p>
           
           <p>Pour optimiser l'utilisation de la plateforme, appliquez la stratégie du <strong>Triple Cumul (Stacking)</strong> :</p>
           <ul>
             <li><strong>Couche 1 :</strong> Le bonus d'activation initial de 30 $ sécurisé sur cette page.</li>
-            <li><strong>Couche 2 :</strong> Les remises en argent courantes du portail (les taux doublent fréquemment pour atteindre 10 % ou 15 % lors des événements promotionnels comme le Black Friday).</li>
-            <li><strong>Couche 3 :</strong> Les remises de votre carte de crédit (par exemple, utiliser une carte offrant de solides remises sur les achats en ligne).</li>
+            <li><strong>Couche 2 :</strong> Les remises en argent courantes du portail (les taux doublent fréquemment pour atteindre 10 % ou 15 % lors des événements promotionnels).</li>
+            <li><strong>Couche 3 :</strong> Les remises de votre carte de crédit (par exemple, utiliser une carte optimisée pour les achats en ligne).</li>
           </ul>
 
           <h3 style="font-size: 1.15rem; font-weight: 700; margin: 18px 0 10px 0;">Observations des taux moyens par secteur au Canada :</h3>
@@ -546,7 +536,6 @@
   </footer>
 
   <script>
-    // Script Thème Sombre / Clair
     const themeToggle = document.getElementById("theme-toggle");
     const currentTheme = localStorage.getItem("theme");
 
